@@ -1,0 +1,17 @@
+(kicad_sch
+	(version 20240101)
+	(generator "eeschema")
+	(generator_version "8.99")
+	(uuid "778ee408-39c1-42dc-be7e-62d5568cc41b")
+	(paper "User" 409.194 289.56)
+	(title_block
+		(title "UNO")
+		(date "7/23/2019 4:33:46 PM")
+	)
+	(lib_symbols)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
