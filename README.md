@@ -25,6 +25,10 @@ This board can only handle IO voltages up to 3.3V, therefore not every Arduino s
 - The reset pin on Arduino board is not connected to the ESP32-S2-Mini. There is a convenient
   pad placed next to the S2-Mini reset button, so if you need the external reset functionality
   you can wire the S2-Mini reset button and the reset pad.
+- The S2-Mini has an onboard LED (located between the USB connector and the '0' button) that is
+  connected to GPIO 15 (Arduino UNO A1 pin). That might cause issues with some designs. In such
+  case remove the LED or the current limiting resistor on the S2-Mini board to fix the issue
+  (the LED will stop working obviously).
 
  **Arduino IDE setup**
  
