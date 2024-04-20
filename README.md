@@ -22,6 +22,9 @@ This board can only handle IO voltages up to 3.3V, therefore not every Arduino s
 - extra analog pins on Digital header pins 1 - 13 (ADC1_0 - ADC2_2)
 - no TTL Uart on digital pins 0 and 1 (however the serial input/output is mapped
   to the USB port)
+- The reset pin on Arduino board is not connected to the ESP32-S2-Mini. There is a convenient
+  pad placed next to the S2-Mini reset button, so if you need the external reset functionality
+  you can wire the S2-Mini reset button and the reset pad.
 
  **Arduino IDE setup**
  
