@@ -13,6 +13,7 @@ This board can only handle IO voltages up to 3.3V, therefore not every Arduino s
 - simple to assemble (just solder the Mini board and Arduino GPIO headers).
 - Digital IO numbering mostly follows AVR UNO pin nmubers
 - Extra GPIO pins exposed on the 6-pin side header
+- USB-C powered
 
 **Differences comapred to Arduino UNO**
 - 3.3V IO logic only!
@@ -29,6 +30,14 @@ This board can only handle IO voltages up to 3.3V, therefore not every Arduino s
   connected to GPIO 15 (Arduino UNO A1 pin). That might cause issues with some designs. In such
   case remove the LED or the current limiting resistor on the S2-Mini board to fix the issue
   (the LED will stop working obviously).
+- Note that the 3.3V rail is powered by a small onboard LDO (voltage regulator) which also
+  powers the MCU. If you need to use higher number of peripherals on the 3.3V power rail then
+  consider adding another LDO (supplied by the 5V rail) to your design/shield. Generally speaking,
+  for few LEDS and a couple of extra ICS (like accelerometer, sensors etc.) the LDO is OK and you'll
+  not need to add an extra LDO.
+- WiFi functionality is untested. It might work, but the PCB antenna is close to the base board
+  so the transmit/reception will not be great. If you'll use a shield that covers the antenna
+  the maximum connection distance will be even shorter.
 
  **Arduino IDE setup**
  
